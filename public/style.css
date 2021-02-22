@@ -1,0 +1,49 @@
+html {
+  background: url(bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: "Akaya Kanadaka", cursive;
+  color: white;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a {
+  color: white;
+}
+
+#player {
+  display: none;
+}
+
+footer {
+  font-size: 1em;
+}
+
+/* OUTER */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* INNER */
+.center {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 25px;
+}

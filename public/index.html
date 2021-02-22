@@ -4,9 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="s.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap"
+      rel="stylesheet"
+    />
     <title>Good Times</title>
   </head>
   <body>
-    https://www.youtube.com/watch?v=oQT9rT74WYM
+    <section class="container">
+      <div class="center">
+        <h1>Something good happened?</h1>
+        <h2>Let's celebrate. Press the button...</h2>
+
+        <p>
+          <a href="javascript:void(0);"><img src="button.png" id="button" /></a>
+        </p>
+
+        <iframe
+          id="player"
+          src="https://www.youtube.com/embed/oQT9rT74WYM?enablejsapi=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <footer>
+          <img src="speed.png" width="100" />
+          <p>From <a href="https://speedwelshpool.com">Speed Welshpool</a></p>
+          <p>
+            <a href="https://github.com/512uk/goodtimes">Source</a> on GitHub
+          </p>
+        </footer>
+      </div>
+    </section>
   </body>
 </html>
