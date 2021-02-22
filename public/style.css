@@ -24,7 +24,7 @@ a {
   color: white;
 }
 
-#player {
+.hide {
   display: none;
 }
 
