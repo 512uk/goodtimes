@@ -1,48 +1,13 @@
-let tag = document.createElement("script");
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-let player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    height: "390",
-    width: "640",
-    videoId: "oQT9rT74WYM",
-    events: {
-      onError: (err) => {
-        console.error(err);
-      },
-    },
-  });
-}
-
+const player = document.getElementById("player");
 const bigRedButton = document.getElementById("button");
-bigRedButton.addEventListener("click", (event) => {
-  if (detectMob()) {
-    window.location = "https://www.youtube.com/watch?v=oQT9rT74WYM";
-    return;
-  }
+const subHeader = document.getElementById("subHeader");
 
-  if (player.getPlayerState() == 1) {
-    player.pauseVideo();
+bigRedButton.addEventListener("click", async () => {
+  if (player.paused) {
+    await player.play();
+    subHeader.innerHTML = "Leave your cares behind... press to pause";
   } else {
-    player.playVideo();
+    await player.pause();
+    subHeader.innerHTML = "Press to play...";
   }
 });
-
-function detectMob() {
-  const toMatch = [
-    /Android/i,
-    /webOS/i,
-    /iPhone/i,
-    /iPad/i,
-    /iPod/i,
-    /BlackBerry/i,
-    /Windows Phone/i,
-  ];
-
-  return toMatch.some((toMatchItem) => {
-    return navigator.userAgent.match(toMatchItem);
-  });
-}
